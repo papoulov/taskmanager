@@ -3,14 +3,23 @@
 
 body{
   /*background-color: #d3dff8;*/
-  background: linear-gradient(to left,  #d3dff8, rgb(125, 125, 249))
+  margin: 0;
+  background-image: url('./assets/task_bg.jpg');
+  height: 100vh; /* You must set a specified height */
+  background-position:center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+  background-attachment: fixed;
 }
 
 .app {
   /*text-align: center;*/
   font-family: 'Josefin Sans', sans-serif;
+  
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  background-color: rgb(255, 255, 255, 0.8)
 }
 
 .App-logo {
@@ -102,7 +111,7 @@ border-width: 0.5px;
 color:azure;
 font-weight: 600;
 font-size: 12px;
-background-color: #3c8ba1;;
+background-color: rgb(245, 149, 14);
 cursor: pointer;
 }
 
@@ -129,7 +138,7 @@ align-items:flex-start;
 }
 
 .updateform button{
-background-color: #3c8ba1;
+background-color: rgb(245, 149, 14);
 cursor: pointer;
 color:azure;
 border-radius: 5px;
