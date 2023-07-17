@@ -14,13 +14,104 @@ body{
 
 .app {
   /*text-align: center;*/
-  font-family: 'Josefin Sans', sans-serif;
-  
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  min-height: 100vh;
+  justify-content: flex-start;
+  align-items: center;
   background-color: rgb(255, 255, 255, 0.8)
 }
+
+.contenant_app{
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  min-height: 100vh;
+  border: 0.5px solid rgb(117, 117, 117);
+}
+
+.entete{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgb(221, 221, 221, 0.5);
+  border-bottom: 0.5px solid rgb(117, 117, 117);
+  padding-top: 5px;
+}
+
+.user_info{
+  margin-right: 20px;
+}
+.menu1 button {
+  border-radius: 5px;
+  margin-right: 5px;
+  padding: 5px;
+  border: none;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'Josefin Sans', 'Courier New', Courier, monospace;
+  background-color: #f7b879;
+  box-shadow: 3px 3px 2px rgb(152, 152, 152);
+
+}
+
+.add_task{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin-right: 5px;
+  padding: 5px;
+  border: none;
+  font-size: 11px;
+  font-weight: 400;
+  font-family: 'Josefin Sans', 'Courier New', Courier, monospace;
+  background-color: #f7b879;
+  box-shadow: 3px 3px 2px rgb(152, 152, 152);
+}
+
+
+
+.img_user{
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  object-fit: cover;
+  margin: 3px;
+
+}
+.menu{
+  
+}
+.section_utilisateur{
+  display: flex;
+  align-items: center;
+
+  
+}
+
+.my_form{
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+}
+
+.input{
+  height: 27px;
+  border-width: 0.5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-right: 5px;
+  width: 50%;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 15px;
+  
+}
+
 
 .App-logo {
   height: 40vmin;
@@ -60,10 +151,13 @@ body{
 
 .conteneur_app{
   display: flex;
-  width: 75vw;
+  flex: 1;
+  width: 76vw;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /*background-color: red;*/
+  border: 0.5px solid #9E9E9E;
+  padding-bottom: 5px;
 }
 
 .composantdetache{
@@ -95,37 +189,19 @@ body{
   margin-right: 10px;
 }
 
-.form{
-  width: 100%;
-  margin-bottom: 15px;
+.composantdetache button :hover{
+  border-radius: 17px;
+  border:none;
+  width: 28px;
+  height: 28px;
+  background-color: rgb(251, 251, 251, 0.6);
+  border:none;
 }
 
-.form button{
-border-top-right-radius: 5px;
-border-bottom-right-radius: 5px;
-height: 29px;
-padding-left: 10px;
-padding-right: 10px;
-border: none;
-border-width: 0.5px;
-color:azure;
-font-weight: 600;
-font-size: 12px;
-background-color: rgb(245, 149, 14);
-cursor: pointer;
-}
 
-.input{
-  height: 25px;
-  border-width: 0.5px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  margin-right: 5px;
-  width: 50%;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 15px;
-  
-}
+
+
+
 
 h1{
   font-size: 18px;
@@ -149,7 +225,7 @@ box-shadow: 2px 2px 3px rgb(74, 74, 74);
 .textarea{
   resize: none;
   border: none;
-  
+
 }
 
 .tooltip{

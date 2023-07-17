@@ -1,12 +1,10 @@
 import { useState } from "react";
 import { myColors } from "../assets/colors";
-import { useDate } from "../utils/date";
+import { IoIosAddCircleOutline } from "react-icons/io";
 
 function Formulaire(props) {
 
     const [maTache, setMaTache] = useState('');
-
-    const todayDate = useDate();
 
 
     const handleChange = (e) => {
@@ -24,36 +22,23 @@ function Formulaire(props) {
                 text: maTache,
                 color: myColors[Math.floor(Math.random() * 10)],
             });
-
             setMaTache('')
         }
     };
 
-    return (<div style={{
-        backgroundColor: 'rgb(221, 221, 221, 0.5)', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center',
-        textAlign: 'center', marginTop: 10
-    }}>
-        <div style={{ width: '100%', textAlign: 'right', marginRight: 20, marginTop: 5, fontSize: 12 }}>
-            {todayDate.date} {todayDate.time}
-        </div>
-        <div style={{ marginBottom: 5 }}>
-            <h1>
-                Bonjour Papou<br /> {props.taches.length === 0 && `Quel est votre programme aujourd'hui ?`} </h1>
-
-            {props.taches.length === 0 ? 'Vous n\'avez aucune tache active. Vous pouvez commencer par ajouter des taches' : `Vous avez ${props.taches.length} tache actives`}
-        </div>
-
-        <form className="form" onSubmit={handleSubmit}>
+    return (<div>
+        <form className="my_form" onSubmit={handleSubmit}>
             <input type="text"
                 className="input"
                 placeholder="Enter votre tache" value={maTache}
-                onChange={handleChange} />
-            <button>
-                AJOUTER
+                onChange={handleChange}
+            />
+            <button className="add_task">
+                <IoIosAddCircleOutline style={{ fontSize: 20, marginRight: 5 }} />AJOUTER
             </button>
         </form>
     </div>
     )
-}
+};
 
 export default Formulaire;
